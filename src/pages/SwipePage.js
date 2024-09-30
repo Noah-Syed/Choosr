@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import heartLogo from '../images/Heart_Logo.png';
 import xLogo from '../images/CircleX.png'
-import { useContext } from 'react'
-import { SocketContext } from '../App'
-
+import choosrLogo from '../images/choosrlogo.png'
+import nameLogo from '../images/name.png'
 export const SwipePage = () => {
   // State variables for tracking movement and rotation
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const [rotation, setRotation] = useState(0);
-  const { cardStack } = useContext(SocketContext)
 
   const handleStart = (event) => {
     setIsDragging(true);
@@ -62,6 +60,30 @@ export const SwipePage = () => {
     }
   };
 
+  //automatically swipes the card right if the user clicks on the heart button
+  const handleHeartClick = () => {
+    setCurrentX(1000);
+    setRotation(20);
+    console.log("User Swiped Right");
+
+    setTimeout(() => {
+      setCurrentX(0);
+      setRotation(0);
+    }, 500);
+  };
+
+  //automatically swipes the card left if the user clicks on the x button
+  const handleXClick = () => {
+    setCurrentX(-1000);
+    setRotation(-20);
+    console.log("User Swiped Left");
+
+    setTimeout(() => {
+      setCurrentX(0);
+      setRotation(0);
+    }, 500);
+  };
+
   useEffect(() => {
     // Add event listeners for mouse/touch events
     const handleMouseMove = (e) => handleMove(e);
@@ -84,20 +106,32 @@ export const SwipePage = () => {
   }, [isDragging, currentX, startX, rotation]);
   return (
     <div className="App">
-      <div
-        className="card"
-        onMouseDown={handleStart}
-        onTouchStart={handleStart}
-        style={{
-          transform: `translateX(${currentX}px) rotate(${rotation}deg)`,
-          transition: !isDragging ? 'transform 0.3s ease-out' : 'none', // Smooth transition when releasing
-        }}
-      >
-        <div className="like-dislike-container">
-          <img src={xLogo} alt="Dislike" className="like-dislike"/>
-          <img src={heartLogo} alt="Love this" className="like-dislike"/>
+      <div className="content-container">
+      <img src={nameLogo} alt="App Logo" className="app-logo" />
+        <div
+          className="card"
+          onMouseDown={handleStart}
+          onTouchStart={handleStart}
+          style={{
+            transform: `translateX(${currentX}px) rotate(${rotation}deg)`,
+            transition: !isDragging ? 'transform 0.3s ease-out' : 'none', // Smooth transition when releasing
+          }}
+        >
+          <img src={choosrLogo} alt="Activity" className="activity-image"/>
+          <h1 className="activity-name">Activity Name</h1>
+          <div className="tag-container">
+            <span className="tag">Type</span>
+            <span className="tag">$$$</span>
+            <span className="tag">Distance</span>
+            <span className="tag">Hours</span>
+          </div>
+          
+          <div className="like-dislike-container">
+            <img src={xLogo} alt="Dislike" className="like-dislike" onClick={handleXClick}/>
+            <img src={heartLogo} alt="Love this" className="like-dislike" onClick={handleHeartClick}/>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
