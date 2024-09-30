@@ -107,7 +107,8 @@ export const SwipePage = () => {
   return (
     <div className="App">
       <div className="content-container">
-      <img src={nameLogo} alt="App Logo" className="app-logo" />
+      <img draggable = "false"
+      src={nameLogo} alt="App Logo" className="app-logo" />
         <div
           className="card"
           onMouseDown={handleStart}
@@ -117,7 +118,8 @@ export const SwipePage = () => {
             transition: !isDragging ? 'transform 0.3s ease-out' : 'none', // Smooth transition when releasing
           }}
         >
-          <img src={choosrLogo} alt="Activity" className="activity-image"/>
+          <img draggable = "false"
+           src={choosrLogo} alt="Activity" className="activity-image"/>
           <h1 className="activity-name">Activity Name</h1>
           <div className="tag-container">
             <span className="tag">Type</span>
@@ -127,8 +129,10 @@ export const SwipePage = () => {
           </div>
           
           <div className="like-dislike-container">
-            <img src={xLogo} alt="Dislike" className="like-dislike" onClick={handleXClick}/>
-            <img src={heartLogo} alt="Love this" className="like-dislike" onClick={handleHeartClick}/>
+            <img draggable = "false"
+            src={xLogo} alt="Dislike" className="like-dislike" onClick={handleXClick}/>
+            <img draggable = "false"
+            src={heartLogo} alt="Love this" className="like-dislike" onClick={handleHeartClick}/>
           </div>
         </div>
       </div>
