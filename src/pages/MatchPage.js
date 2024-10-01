@@ -10,6 +10,7 @@ import { SocketContext } from '../App'
 export const MatchPage = () => {
     const [showCard, setShowCard] = useState(false);
     const [showCheckmark, setShowCheckmark] = useState(false);
+    const { cardStack, matchIndex } = useContext(SocketContext);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -41,11 +42,11 @@ export const MatchPage = () => {
                 <div className="card"> 
                 <div className="content-wrapper">
                     <img draggable = "false"
-                    src={choosrLogo} alt="Activity" className="activity-image"/>
-                    <h1 className="activity-name">Activity</h1>
+                    src={`restaurants/${cardStack[matchIndex].image}`} alt="Activity" className="activity-image"/>
+                    <h1 className="activity-name">{cardStack[matchIndex].name}</h1>
                 <div className="tag-container">
-                  <span className="tag">$$$</span>
-                  <span className="tag">distance</span>
+                  <span className="tag">{cardStack[matchIndex].price}</span>
+                  <span className="tag">{cardStack[matchIndex].distance}</span>
                 </div>
                 <div className="description-container">
                   <p className="activity-description">Hi</p>

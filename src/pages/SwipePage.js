@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import {useNavigate} from 'react-router-dom'
 import heartLogo from '../images/Heart_Logo.png';
 import xLogo from '../images/CircleX.png';
 import choosrLogo from '../images/choosrlogo.png';
@@ -14,6 +15,7 @@ export const SwipePage = ( { socket } ) => {
   const { cardStack } = useContext(SocketContext);
   const [cardIndex, setCardIndex] = useState(0);
   const [matchArray, setMatchArray] = useState([]);
+  const navigate = useNavigate();
 
 
   const handleStart = (event) => {
@@ -114,6 +116,12 @@ export const SwipePage = ( { socket } ) => {
   };
 
   useEffect(() => {
+
+    socket.on('redirect', (data) => {
+      navigate(data.url)
+    })
+
+
     // Add event listeners for mouse/touch events
     const handleMouseMove = (e) => handleMove(e);
     const handleMouseUp = () => handleEnd();
