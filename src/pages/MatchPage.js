@@ -42,14 +42,14 @@ export const MatchPage = () => {
                 <div className="card"> 
                 <div className="content-wrapper">
                     <img draggable = "false"
-                    src={`restaurants/${cardStack[matchIndex].image}`} alt="Activity" className="activity-image"/>
+                    src={`pics/${cardStack[matchIndex].image}`} alt="Activity" className="activity-image"/>
                     <h1 className="activity-name">{cardStack[matchIndex].name}</h1>
                 <div className="tag-container">
                   <span className="tag">{cardStack[matchIndex].price}</span>
                   <span className="tag">{cardStack[matchIndex].distance}</span>
                 </div>
                 <div className="description-container">
-                  <p className="activity-description">Hi</p>
+                  <p className="activity-description">{cardStack[matchIndex].description}</p>
                 </div>
                 <img draggable = "false"
                 src={check} alt="checkmark" className="checkmark"/>

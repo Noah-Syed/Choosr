@@ -55,7 +55,7 @@ export const SwipePage = ( { socket } ) => {
         socket.emit('sendArray', matchArray);
         console.log("Sent Match Array: ", matchArray)
         console.log("User Swiped Right");
-        setCardIndex(cardIndex + 1);
+        (cardIndex + 1) == cardStack.length ? setCardIndex(cardIndex) : setCardIndex(cardIndex + 1);
       }
       else{
         matchArray.push(0)
@@ -63,7 +63,7 @@ export const SwipePage = ( { socket } ) => {
         socket.emit('sendArray', matchArray);
         console.log("Sent Match Array: ", matchArray)
         console.log("User Swiped Left");
-        setCardIndex(cardIndex + 1);
+        (cardIndex + 1) == cardStack.length ? setCardIndex(cardIndex) : setCardIndex(cardIndex + 1);
       }
 
 
@@ -84,7 +84,7 @@ export const SwipePage = ( { socket } ) => {
     setCurrentX(1000);
     setRotation(20);
     console.log("User Swiped Right");
-    setCardIndex(cardIndex + 1)
+    (cardIndex + 1) == cardStack.length ? setCardIndex(cardIndex) : setCardIndex(cardIndex + 1);
     matchArray.push(1);
     setMatchArray([...matchArray])
     socket.emit('sendArray', matchArray)
@@ -102,7 +102,7 @@ export const SwipePage = ( { socket } ) => {
     setCurrentX(-1000);
     setRotation(-20);
     console.log("User Swiped Left");
-    setCardIndex(cardIndex + 1)
+    (cardIndex + 1) == cardStack.length ? setCardIndex(cardIndex) : setCardIndex(cardIndex + 1);
     matchArray.push(0);
     setMatchArray([...matchArray]);
     socket.emit('sendArray', matchArray)
@@ -116,11 +116,10 @@ export const SwipePage = ( { socket } ) => {
   };
 
   useEffect(() => {
-
+    
     socket.on('redirect', (data) => {
       navigate(data.url)
     })
-
 
     // Add event listeners for mouse/touch events
     const handleMouseMove = (e) => handleMove(e);
@@ -159,14 +158,14 @@ export const SwipePage = ( { socket } ) => {
 
           <div className="content-wrapper">
             <img draggable = "false"
-            src={`restaurants/${cardStack[cardIndex].image}`} alt="Activity" className="activity-image"/>
+            src={`pics/${cardStack[cardIndex].image}`} alt="Activity" className="activity-image"/>
             <h1 className="activity-name">{cardStack[cardIndex].name}</h1>
             <div className="tag-container">
               <span className="tag">{cardStack[cardIndex].price}</span>
               <span className="tag">{cardStack[cardIndex].distance}</span>
             </div>
             <div className="description-container">
-              <p className="activity-description">Hi</p>
+              <p className="activity-description">{cardStack[cardIndex].description}</p>
             </div>
           </div>
 
