@@ -6,6 +6,7 @@ import { WaitingPage } from './pages/WaitingPage'
 import { SocketContext } from './App';
 import React, { useContext } from 'react';
 import { MatchPage } from './pages/MatchPage';
+import { NoMatchPage } from './pages/NoMatchPage';
 
 
 
@@ -25,6 +26,8 @@ export const PageRoutes = () => {
           <Route path="*" element={<NotFoundPage />} />
 
           <Route path="/match" element={<MatchPage />} />
+
+          <Route path="/nomatch" element={<NoMatchPage />} />
 
         </Routes>
       </Router>
