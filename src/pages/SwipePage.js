@@ -147,14 +147,23 @@ export const SwipePage = ( { socket } ) => {
             transition: !isDragging ? 'transform 0.3s ease-out' : 'none', // Smooth transition when releasing
           }}
         >
-          <img draggable = "false"
-           src={`restaurants/${cardStack[cardIndex].image}`} alt="Activity" className="activity-image"/>
-          <h1 className="activity-name">{cardStack[cardIndex].name}</h1>
-          <div className="tag-container">
-            <span className="tag">{cardStack[cardIndex].price}</span>
-            <span className="tag">{cardStack[cardIndex].distance}</span>
+          {/*Main content container*/}
+
+          <div className="content-wrapper">
+            <img draggable = "false"
+            src={`restaurants/${cardStack[cardIndex].image}`} alt="Activity" className="activity-image"/>
+            <h1 className="activity-name">{cardStack[cardIndex].name}</h1>
+            <div className="tag-container">
+              <span className="tag">{cardStack[cardIndex].price}</span>
+              <span className="tag">{cardStack[cardIndex].distance}</span>
+            </div>
+            <div className="description-container">
+              <p className="activity-description">Hi</p>
+            </div>
           </div>
-          
+
+          {/*Like and Dislike buttons*/}
+
           <div className="like-dislike-container">
             <img draggable = "false"
             src={xLogo} alt="Dislike" className="like-dislike" onClick={handleXClick}/>
