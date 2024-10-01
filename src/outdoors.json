@@ -1,0 +1,64 @@
+{
+    "outdoor_activities": [
+        {
+            "id": 1,
+            "name": "Hiking at the Cascades",
+            "image": "cascades.png",
+            "distance": "21 mi"
+        },
+        {
+            "id": 2,
+            "name": "Mountain Biking at Pandapas Pond",
+            "image": "pandapas-pond.png",
+            "distance": "7.5 mi"
+        },
+        {
+            "id": 3,
+            "name": "Tubing on the New River",
+            "image": "new-river.png",
+            "distance": "28 mi"
+        },
+        {
+            "id": 4,
+            "name": "Hiking McAfee Knob",
+            "image": "mcafee-knob.png",
+            "distance": "23.5 mi"
+        },
+        {
+            "id": 5,
+            "name": "Fishing at Claytor Lake",
+            "image": "claytor-lake.png",
+            "distance": "29 mi"
+        },
+        {
+            "id": 6,
+            "name": "Rock Climbing at Bozoo",
+            "image": "bozoo-climbing.png",
+            "distance": "39 mi"
+        },
+        {
+            "id": 7,
+            "name": "Wildlife Watching at Heritage Park",
+            "image": "heritage-park.png",
+            "distance": "2.5 mi"
+        },
+        {
+            "id": 8,
+            "name": "Hahn Horticulture Garden",
+            "image": "hahn-garden.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 9,
+            "name": "Drillfield",
+            "image": "drillfield.png",
+            "distance": "0.5 mi"
+        },
+        {
+            "id": 10,
+            "name": "Hiking Dragon’s Tooth",
+            "image": "dragons-tooth.png",
+            "distance": "21.5 mi"
+        }
+    ]
+}

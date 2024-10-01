@@ -1,0 +1,64 @@
+{
+    "nightlife_activities": [
+        {
+            "id": 1,
+            "name": "622 North",
+            "image": "north-622-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 2,
+            "name": "The Milk Parlor",
+            "image": "milk-parlor-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 3,
+            "name": "Blacksburg Taphouse",
+            "image": "blacksburg-taphouse-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 4,
+            "name": "Lyric Theatre",
+            "image": "lyric-theater-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 5,
+            "name": "Top of the Stairs (TOTS)",
+            "image": "tots-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 6,
+            "name": "McClain's at First & Main",
+            "image": "mcclains-logo.png",
+            "distance": "1.5 mi"
+        },
+        {
+            "id": 7,
+            "name": "Main Street Inn",
+            "image": "main-st-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 8,
+            "name": "Mellow Mushroom",
+            "image": "mellow-mushroom-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 9,
+            "name": "B&B Theatres",
+            "image": "b-and-b-theater-logo.png",
+            "distance": "1 mi"
+        },
+        {
+            "id": 10,
+            "name": "She-Sha Cafe & Hookah Lounge",
+            "image": "hookah-lounge-logo.png",
+            "distance": "1 mi"
+        }
+    ]
+}

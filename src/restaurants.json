@@ -1,0 +1,89 @@
+{
+    "restaurants": [
+    {
+      "id": 1,
+      "name": "Centro Taco Bar",
+      "image": "centro-logo.png",
+      "price": "$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 2,
+      "name": "Cabo Fish Taco",
+      "image": "cabo-fish-taco-logo.png",
+      "price": "$$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 3,
+      "name": "PK's Pizza",
+      "image": "PKs-logo.png",
+      "price": "$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 4,
+      "name": "Sharkey's",
+      "image": "sharkeys-logo.png",
+      "price": "$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 5,
+      "name": "Gaucho Brazilian Grille",
+      "image": "gaucho-logo.png",
+      "price": "$$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 6,
+      "name": "Souvlaki",
+      "image": "souvlaki-logo.png",
+      "price": "$",
+      "distance": "0.5 mi"
+    },
+    {
+      "id": 7,
+      "name": "Hello Bagel",
+      "image": "hello-bagel-logo.png",
+      "price": "$",
+      "distance": "1.5 mi"
+    },
+    {
+      "id": 8,
+      "name": "El Bronco Mexican Bar & Grill",
+      "image": "el-bronco-logo.png",
+      "price": "$",
+      "distance": "8.5 mi"
+    },
+    {
+      "id": 9,
+      "name": "Dude's Drive In",
+      "image": "dudes-drive-in-logo.png",
+      "price": "$",
+      "distance": "10 mi"
+    },
+    {
+      "id": 10,
+      "name": "Himalayan Curry Cafe",
+      "image": "himalayan-cafe-logo.png",
+      "price": "$",
+      "distance": "1.5 mi"
+    },
+    {
+      "id": 11,
+      "name": "Green's Grill & Sushi",
+      "image": "greens-grill-sushi-logo.png",
+      "price": "$$",
+      "distance": "1 mi"
+    },
+    {
+      "id": 12,
+      "name": "Mellow Mushroom",
+      "image": "mellow-mushroom-logo.png",
+      "price": "$$",
+      "distance": "1 mi"
+    }
+  ]
+}
+
