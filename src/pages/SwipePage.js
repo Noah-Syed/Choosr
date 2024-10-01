@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useContext } from 'react';
 import heartLogo from '../images/Heart_Logo.png';
-import xLogo from '../images/CircleX.png'
-import choosrLogo from '../images/choosrlogo.png'
-import nameLogo from '../images/name.png'
-import { SocketContext } from '../App'
+import xLogo from '../images/CircleX.png';
+import choosrLogo from '../images/choosrlogo.png';
+import nameLogo from '../images/name.png';
+import { SocketContext } from '../App';
 
-export const SwipePage = () => {
+export const SwipePage = ( { socket } ) => {
   // State variables for tracking movement and rotation
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const [rotation, setRotation] = useState(0);
-  
-  const { cardStack } = useContext(SocketContext)
-  
+  const { cardStack } = useContext(SocketContext);
   const [cardIndex, setCardIndex] = useState(0);
+  const [matchArray, setMatchArray] = useState([]);
+
 
   const handleStart = (event) => {
     setIsDragging(true);
@@ -48,10 +48,20 @@ export const SwipePage = () => {
       setCurrentX(direction * 1000); // Move off-screen
 
       if(direction == 1){
+        matchArray.push(1);
+        setMatchArray([...matchArray]);
+        socket.emit('sendArray', matchArray);
+        console.log("Sent Match Array: ", matchArray)
         console.log("User Swiped Right");
+        setCardIndex(cardIndex + 1);
       }
       else{
+        matchArray.push(0)
+        setMatchArray([...matchArray]);
+        socket.emit('sendArray', matchArray);
+        console.log("Sent Match Array: ", matchArray)
         console.log("User Swiped Left");
+        setCardIndex(cardIndex + 1);
       }
 
 
@@ -60,7 +70,6 @@ export const SwipePage = () => {
         setCurrentX(0);
         setRotation(0);
       }, 500);
-      setCardIndex(cardIndex + 1)
     } else {
       // Snap back if swipe was too short
       setCurrentX(0);
@@ -74,6 +83,10 @@ export const SwipePage = () => {
     setRotation(20);
     console.log("User Swiped Right");
     setCardIndex(cardIndex + 1)
+    matchArray.push(1);
+    setMatchArray([...matchArray])
+    socket.emit('sendArray', matchArray)
+    console.log("Sent Match Array: ", matchArray)
     console.log("Card Index: ", cardIndex)
     console.log("Element: ", cardStack[cardIndex].name);
     setTimeout(() => {
@@ -88,6 +101,10 @@ export const SwipePage = () => {
     setRotation(-20);
     console.log("User Swiped Left");
     setCardIndex(cardIndex + 1)
+    matchArray.push(0);
+    setMatchArray([...matchArray]);
+    socket.emit('sendArray', matchArray)
+    console.log("Sent Match Array: ", matchArray)
     console.log("Card Index: ", cardIndex)
     console.log("Element: ", cardStack[cardIndex].name);
     setTimeout(() => {

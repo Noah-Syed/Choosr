@@ -24,6 +24,7 @@ app.use(cors({
 
 //0 initial connections
 let peopleConnected = 0;
+let matchData = {};
 io.on('connection', (socket) => {
  
   peopleConnected++;
@@ -39,9 +40,38 @@ io.on('connection', (socket) => {
   }
   console.log("Emitted to Client!");
 
+  socket.on('sendArray', (data) => {
+    
+    console.log("Array Has Been Received: ", data);
+
+    matchData[socket.id] = data
+    
+    const clientIds = Object.keys(matchData);
+
+    console.log(clientIds.length)
+    if(clientIds.length >= 2){
+      const client1Array = matchData[clientIds[0]];
+      const client2Array = matchData[clientIds[1]];
+      
+      let minIndex = Math.min(client1Array.length-1, client2Array.length-1);
+
+      for(let i = 0; i <= minIndex; i++){
+          if(client1Array[i] == client2Array[i]){
+            console.log("Match Found at Index: ", i);
+
+            io.emit('match', {matchIndex: i});
+            io.emit('redirect', {url: '/match'});
+          }
+      }
+
+    }
+
+
+  })
+
 
   //Handle disconnects?
-  io.on('disconnect', (scoket) => {
+  io.on('disconnect', (socket) => {
     peopleConnected--;
     console.log('Someone Left D:');
   })
