@@ -11,7 +11,7 @@ import { MatchPage } from './pages/MatchPage';
 
 export const PageRoutes = () => {
 
-    const { isFirstUser, redirectToSwipe, cardStack } = useContext(SocketContext);
+    const { isFirstUser, redirectToSwipe, cardStack, socket } = useContext(SocketContext);
 
     return(
       <Router>
@@ -20,7 +20,7 @@ export const PageRoutes = () => {
           //We want only the first user to be shown the search page
           <Route path="/" element={isFirstUser ? <SearchPage /> : <WaitingPage />} />
           
-          <Route path="/swipe" element={<SwipePage />} />
+          <Route path="/swipe" element={<SwipePage socket={socket} />} />
 
           <Route path="*" element={<NotFoundPage />} />
 

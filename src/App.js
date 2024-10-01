@@ -36,7 +36,7 @@ function App() {
 
   return(
     //Give routing component our context for the firstUser
-    <SocketContext.Provider value={{ isFirstUser, cardStack, redirectToSwipe }}>
+    <SocketContext.Provider value={{ isFirstUser, cardStack, redirectToSwipe, socket }}>
       <PageRoutes />
     </SocketContext.Provider>
   );
