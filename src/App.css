@@ -6,7 +6,7 @@ html, body {
     display: flex;
     justify-content: center; /* Horizontally center the box */
     align-items: center; /* Vertically center the box */
-    background-color: #f0f0f0; /* Background color for contrast */
+    background-color: #5a0404; /* Background color for contrast */
 }
 
 #root{
@@ -103,12 +103,52 @@ html, body {
 
 #form {
   background-image: linear-gradient(180deg, #ff3c00, #ff8700);
-  width: 60%;
+  width: 98%;
   height: 44px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0px auto;
+  max-width: 100vw;
+}
+
+.search-page-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.name-image {
+  display: block;
+  margin: 0 auto;
+  width: 550px;
+  height: auto;
+}
+
+.waiting-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.waiting-name-image {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 input {

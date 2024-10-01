@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-
 import { SearchPage } from './pages/SearchPage';
 import { SwipePage } from './pages/SwipePage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { WaitingPage } from './pages/Testing'
+import { WaitingPage } from './pages/WaitingPage'
 import { SocketContext } from './App';
 import React, { useContext } from 'react';
 
