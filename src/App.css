@@ -65,6 +65,7 @@ html, body {
   width: 300px;
   height: auto;
   z-index: 1; 
+  animation: stamp 0.5s ease forwards;
 }
 
 .content-wrapper {
@@ -127,6 +128,27 @@ html, body {
   box-sizing: border-box;
   margin-bottom: 10px;
   margin-bottom: 10px;
+}
+
+.flashing-image-container {
+  background-color: #5a0404;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flashing-image {
+  width: 100%;
+  max-width: 500px;
+  animation: flash 1s infinite;
 }
 
 .activity-description {
@@ -233,4 +255,25 @@ svg {
   width: 24px;
   height: 24px;
   padding: 10px;
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
