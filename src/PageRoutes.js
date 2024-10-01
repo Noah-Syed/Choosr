@@ -5,6 +5,7 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { WaitingPage } from './pages/WaitingPage'
 import { SocketContext } from './App';
 import React, { useContext } from 'react';
+import { MatchPage } from './pages/MatchPage';
 
 
 
@@ -22,6 +23,8 @@ export const PageRoutes = () => {
           <Route path="/swipe" element={<SwipePage socket={socket} />} />
 
           <Route path="*" element={<NotFoundPage />} />
+
+          <Route path="/match" element={<MatchPage />} />
 
         </Routes>
       </Router>
