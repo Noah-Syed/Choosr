@@ -11,13 +11,13 @@ const bodyParser = require('body-parser');
 // Enable CORS so that I can actually send and receive requests without errors.
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://172.30.111.41:3000",
     methods: ["GET", "POST"]
   }
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000',  // Allow requests from this origin
+  origin: 'http://172.30.111.41:3000',  // Allow requests from this origin
   methods: ['GET', 'POST'],  // Specify allowed HTTP methods
   //credentials: true,  // If you are dealing with cookies/authentication
 }));
@@ -56,7 +56,7 @@ io.on('connection', (socket) => {
       let minIndex = Math.min(client1Array.length-1, client2Array.length-1);
 
       for(let i = 0; i <= minIndex; i++){
-          if(client1Array[i] == client2Array[i]){
+          if((client1Array[i] == 1) && (client2Array[i] == 1)){
             console.log("Match Found at Index: ", i);
 
             io.emit('match', {matchIndex: i});
