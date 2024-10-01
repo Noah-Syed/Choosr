@@ -9,7 +9,7 @@ export const SocketContext = React.createContext();
 
 
 //Connect to our backend
-const socket = io('http://localhost:3001');
+const socket = io('http://172.30.111.41:3001');
 
 function App() {
 
