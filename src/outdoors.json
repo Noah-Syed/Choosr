@@ -4,61 +4,71 @@
             "id": 1,
             "name": "Hiking at the Cascades",
             "image": "cascades.png",
-            "distance": "21 mi"
+            "distance": "21 mi",
+            "description": "The Cascades offers one of the most scenic hikes in the area, with a 66-foot waterfall as the main attraction. The 4-mile round trip hike is moderately challenging and features lush forests, a mountain stream, and serene natural beauty."
         },
         {
             "id": 2,
             "name": "Mountain Biking at Pandapas Pond",
             "image": "pandapas-pond.png",
-            "distance": "7.5 mi"
+            "distance": "7.5 mi",
+            "description": "Pandapas Pond is a popular destination for mountain bikers with its well-maintained trails that wind through forests and meadows. The area also has picnic spots and a pond, perfect for a post-ride relaxation."
         },
         {
             "id": 3,
             "name": "Tubing on the New River",
             "image": "new-river.png",
-            "distance": "28 mi"
+            "distance": "28 mi",
+            "description": "The New River offers fantastic tubing opportunities, with slow-moving waters perfect for beginners and sections of Class I-III rapids for more experienced tubers. The surrounding views of the Appalachian Mountains make it a scenic adventure."
         },
         {
             "id": 4,
             "name": "Hiking McAfee Knob",
             "image": "mcafee-knob.png",
-            "distance": "23.5 mi"
+            "distance": "23.5 mi",
+            "description": "McAfee Knob is one of the most iconic hikes on the Appalachian Trail, famous for its panoramic views from the summit. The 8-mile round trip hike offers a challenging ascent, but the views are well worth the effort."
         },
         {
             "id": 5,
             "name": "Fishing at Claytor Lake",
             "image": "claytor-lake.png",
-            "distance": "29 mi"
+            "distance": "29 mi",
+            "description": "Claytor Lake is a 4,500-acre lake popular for fishing, especially for species like bass, walleye, and catfish. The surrounding state park also offers camping, hiking, and boating opportunities."
         },
         {
             "id": 6,
             "name": "Rock Climbing at Bozoo",
             "image": "bozoo-climbing.png",
-            "distance": "39 mi"
+            "distance": "39 mi",
+            "description": "Bozoo is a prime spot for rock climbing enthusiasts, offering a range of climbing routes with varying difficulty levels. Located near the West Virginia border, it’s a hidden gem for climbers seeking adventure in a serene setting."
         },
         {
             "id": 7,
             "name": "Wildlife Watching at Heritage Park",
             "image": "heritage-park.png",
-            "distance": "2.5 mi"
+            "distance": "2.5 mi",
+            "description": "Heritage Park is a great place for wildlife watching, with open fields, wooded trails, and wetlands that attract a variety of birds and small animals. It’s perfect for a quiet afternoon immersed in nature."
         },
         {
             "id": 8,
             "name": "Hahn Horticulture Garden",
             "image": "hahn-garden.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "The Hahn Horticulture Garden at Virginia Tech is a six-acre public garden featuring a variety of themed sections like the water and shade gardens, offering beautiful natural scenery. It's a peaceful space for strolls, photography, and outdoor learning, located conveniently on the Blacksburg campus."
         },
         {
             "id": 9,
             "name": "Drillfield",
             "image": "drillfield.png",
-            "distance": "0.5 mi"
+            "distance": "0.5 mi",
+            "description": "The Drillfield at Virginia Tech is a large, open grassy area located at the heart of campus, serving as a hub for student activity and a venue for major campus events. It’s a popular spot for recreation, relaxation, and historical significance, symbolizing the connection between Virginia Tech’s military roots and its modern campus life."
         },
         {
             "id": 10,
             "name": "Hiking Dragon’s Tooth",
             "image": "dragons-tooth.png",
-            "distance": "21.5 mi"
+            "distance": "21.5 mi",
+            "description": "Dragon’s Tooth is another iconic hike on the Appalachian Trail, known for its rugged rock formations and panoramic views. The 5.7-mile round trip is challenging, especially near the summit, but the views from the top are breathtaking."
         }
     ]
 }

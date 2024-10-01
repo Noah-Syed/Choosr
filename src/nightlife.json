@@ -4,61 +4,71 @@
             "id": 1,
             "name": "622 North",
             "image": "north-622-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "622 North is a lively spot known for its diverse food menu, craft beers, and cocktails, offering a vibrant atmosphere for casual dining or a night out. With multiple levels and a spacious patio, it’s a popular place for both locals and students."
         },
         {
             "id": 2,
             "name": "The Milk Parlor",
             "image": "milk-parlor-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "The Milk Parlor is a quirky, retro-themed bar offering live music, arcade games, and a variety of drinks. It’s a favorite for its laid-back vibe, unique decor, and eclectic entertainment."
         },
         {
             "id": 3,
             "name": "Blacksburg Taphouse",
             "image": "blacksburg-taphouse-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "Blacksburg Taphouse is known for its extensive selection of craft beers and delicious pub fare. Its cozy atmosphere and frequent live music make it a great spot for socializing and enjoying local brews."
         },
         {
             "id": 4,
             "name": "Lyric Theatre",
             "image": "lyric-theater-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "The Lyric Theatre is a historic, non-profit movie theater showcasing independent films, concerts, and special events. Located in downtown Blacksburg, it’s a cultural hub for movie lovers and performing arts enthusiasts."
         },
         {
             "id": 5,
             "name": "Top of the Stairs (TOTS)",
             "image": "tots-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "TOTS is an iconic Blacksburg bar, famous for its signature drink, the Rail, and its rooftop seating. It’s a hotspot for Virginia Tech students looking to enjoy a lively atmosphere and great views of downtown."
         },
         {
             "id": 6,
             "name": "McClain's at First & Main",
             "image": "mcclains-logo.png",
-            "distance": "1.5 mi"
+            "distance": "1.5 mi",
+            "description": "McClain’s is a bowling alley, arcade, and sports bar all in one, offering a variety of entertainment options in a fun, casual setting. It’s great for families during the day and a popular nightlife destination in the evening."
         },
         {
             "id": 7,
             "name": "Main Street Inn",
             "image": "main-st-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "Main Street Inn is a boutique hotel in the heart of downtown Blacksburg, known for its cozy ambiance and proximity to local nightlife. It’s a perfect place to stay for those looking to explore the town’s vibrant bar and restaurant scene."
         },
         {
             "id": 8,
             "name": "Mellow Mushroom",
             "image": "mellow-mushroom-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "Mellow Mushroom is a laid-back pizza joint offering creative pizzas, craft beers, and a colorful, artistic atmosphere. It’s a go-to spot for students and locals alike, especially for casual nights out with friends."
         },
         {
             "id": 9,
             "name": "B&B Theatres",
             "image": "b-and-b-theater-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "B&B Theatres at First & Main offers a luxury movie-going experience with reclining seats and the latest film releases. It’s perfect for a relaxed night out, combining entertainment with comfort and convenience."
         },
         {
             "id": 10,
             "name": "She-Sha Cafe & Hookah Lounge",
             "image": "hookah-lounge-logo.png",
-            "distance": "1 mi"
+            "distance": "1 mi",
+            "description": "She-Sha Cafe is a unique hookah lounge and café offering a cozy, eclectic environment with tea, coffee, and light bites. Its artistic vibe and hookah offerings make it a favorite for a more relaxed, social nightlife experience."
         }
     ]
 }
