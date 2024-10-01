@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import heartLogo from '../images/Heart_Logo.png';
 import xLogo from '../images/CircleX.png'
 import choosrLogo from '../images/choosrlogo.png'
 import nameLogo from '../images/name.png'
+import { SocketContext } from '../App'
+
 export const SwipePage = () => {
   // State variables for tracking movement and rotation
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const [rotation, setRotation] = useState(0);
+  
+  const { cardStack } = useContext(SocketContext)
+  
+  const [cardIndex, setCardIndex] = useState(0);
 
   const handleStart = (event) => {
     setIsDragging(true);
@@ -48,11 +54,13 @@ export const SwipePage = () => {
         console.log("User Swiped Left");
       }
 
+
       // Reset the card after animation
       setTimeout(() => {
         setCurrentX(0);
         setRotation(0);
       }, 500);
+      setCardIndex(cardIndex + 1)
     } else {
       // Snap back if swipe was too short
       setCurrentX(0);
@@ -65,7 +73,9 @@ export const SwipePage = () => {
     setCurrentX(1000);
     setRotation(20);
     console.log("User Swiped Right");
-
+    setCardIndex(cardIndex + 1)
+    console.log("Card Index: ", cardIndex)
+    console.log("Element: ", cardStack[cardIndex].name);
     setTimeout(() => {
       setCurrentX(0);
       setRotation(0);
@@ -77,7 +87,9 @@ export const SwipePage = () => {
     setCurrentX(-1000);
     setRotation(-20);
     console.log("User Swiped Left");
-
+    setCardIndex(cardIndex + 1)
+    console.log("Card Index: ", cardIndex)
+    console.log("Element: ", cardStack[cardIndex].name);
     setTimeout(() => {
       setCurrentX(0);
       setRotation(0);
@@ -119,13 +131,11 @@ export const SwipePage = () => {
           }}
         >
           <img draggable = "false"
-           src={choosrLogo} alt="Activity" className="activity-image"/>
-          <h1 className="activity-name">Activity Name</h1>
+           src={`restaurants/${cardStack[cardIndex].image}`} alt="Activity" className="activity-image"/>
+          <h1 className="activity-name">{cardStack[cardIndex].name}</h1>
           <div className="tag-container">
-            <span className="tag">Type</span>
-            <span className="tag">$$$</span>
-            <span className="tag">Distance</span>
-            <span className="tag">Hours</span>
+            <span className="tag">{cardStack[cardIndex].price}</span>
+            <span className="tag">{cardStack[cardIndex].distance}</span>
           </div>
           
           <div className="like-dislike-container">
